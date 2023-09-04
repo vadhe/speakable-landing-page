@@ -2,11 +2,16 @@
 
 import { I18nextProvider } from 'react-i18next';
 import Footer from './components/landing-page/Footer';
-import { Navbar } from './components/landing-page/Navbar';
+// import { Navbar } from './components/landing-page/Navbar';
 import './global.css';
 import useDarModeStore from './store/useDarkModeStore';
 import i18n from './locales/i18n';
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
+
+const Navbar = dynamic(() => import('./components/landing-page/Navbar') as Promise<any>, {
+  ssr: false,
+}) 
 
 export default function RootLayout({
   children,
