@@ -15,7 +15,7 @@ export const Card = ({description,img,title, bg}:CardProps) => {
         }}
         className="w-24 h-24 shadow-xl flex justify-center items-center bg-white absolute border-white rounded-xl"
       >
-        <img className='w-10 h-10' src={img} />
+        <img width={40} height={40} className='w-10 h-10' src={img} alt="cover"/>
       </div>
       <div className={`max-w-sm ${bg} dark:bg-gray-400 text-center p-12 border  rounded-xl`}>
         <h2 className="text-xl font-semibold mb-2.5 mt-6">{title}</h2>

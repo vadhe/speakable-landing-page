@@ -40,7 +40,7 @@ const LISTCARDS = [
 ];
 export const Features = () => {
   return (
-    <div className="px-6 pb-12 text-center bg-gray-400 bg-opacity-20 dark:bg-gray-900 pt-6">
+    <div className="px-6 pb-12 text-center bg-gray-300 bg-opacity-20 dark:bg-gray-900 pt-6" id="features">
       <TitleSection subTitle="Our Amazing Features" title="Our Future" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-24 md:gap-x-10 md:gap-y-44 mt-16">
         {LISTCARDS.map((list) => {

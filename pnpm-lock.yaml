@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@heroicons/react': ^2.0.18
+  '@next/font': ^13.4.19
   '@nx/eslint-plugin': 16.7.4
   '@nx/jest': 16.7.4
   '@nx/js': 16.7.4
@@ -49,6 +50,7 @@ specifiers:
 
 dependencies:
   '@heroicons/react': 2.0.18_react@18.2.0
+  '@next/font': 13.4.19
   '@nx/next': 16.7.4_uetw6io3nh4jtr4yccdawoxeie
   '@supabase/supabase-js': 2.33.1
   daisyui: 3.6.4_ts-node@10.9.1
@@ -1807,6 +1809,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.4.19:
+    resolution: {integrity: sha512-yOuSRYfqksWcaG/sATr1/DEGvvI8gnmAAnQCCZ0+L9p4Pio3/DMu71J56YHh9Hz84LDN4tMVzuux0ssCuM50sA==}
+    dev: false
 
   /@next/swc-darwin-arm64/13.4.1:
     resolution: {integrity: sha512-eF8ARHtYfnoYtDa6xFHriUKA/Mfj/cCbmKb3NofeKhMccs65G6/loZ15a6wYCCx4rPAd6x4t1WmVYtri7EdeBg==}

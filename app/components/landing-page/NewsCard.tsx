@@ -7,6 +7,9 @@ export const NewsCard = () => {
           src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
           alt="Shoes"
           className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+          loading="lazy"
+          width={500}
+          height={500}
         />
       </figure>
       <div className="card-body dark:bg-gray-900">

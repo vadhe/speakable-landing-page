@@ -8,11 +8,18 @@ import useDarModeStore from './store/useDarkModeStore';
 import i18n from './locales/i18n';
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import Head from 'next/head'
+import { Poppins } from '@next/font/google';
 
 const Navbar = dynamic(() => import('./components/landing-page/Navbar') as Promise<any>, {
   ssr: false,
 }) 
 
+const poppins = Poppins({
+  subsets: ['latin'] ,
+  weight: ['400', '600'],
+  variable: '--font-poppins'
+})
 export default function RootLayout({
   children,
 }: {
@@ -21,7 +28,7 @@ export default function RootLayout({
   const { isDarkMode } = useDarModeStore();
   return (
     <html lang="en" className={isDarkMode ? 'dark' : ''}>
-      <body className="bg-base-100 font-poppins dark:bg-gray-900 text-gray-900 dark:text-white">
+      <body className={`${poppins.variable} font-poppins bg-base-100 dark:bg-gray-900 text-gray-900 dark:text-white`}>
         <I18nextProvider i18n={i18n}>
           <Navbar />
           {children}
