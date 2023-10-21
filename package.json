@@ -10,7 +10,6 @@
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.18",
-    "@next/font": "^13.4.19",
     "@nx/next": "16.7.4",
     "@supabase/supabase-js": "^2.33.1",
     "daisyui": "^3.6.4",

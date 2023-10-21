@@ -28,9 +28,21 @@ const Links = [
   },
 ];
 export const Navbar = () => {
-  const { setDarkMode } = useDarModeStore();
+  const { setDarkMode, isDarkMode } = useDarModeStore();
   const { i18n } = useTranslation();
   const [scrollY, setScrollY] = useState(window.scrollY);
+
+  useEffect(() => {
+    if (
+      isDarkMode ||
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
+
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
       setScrollY(window.scrollY);
@@ -109,7 +121,10 @@ export const Navbar = () => {
           </div>
         </label>
         <svg
-          onClick={setDarkMode}
+          onClick={() => {
+            if(window.matchMedia('(prefers-color-scheme: dark)').matches) return;
+            setDarkMode(!isDarkMode)
+          }}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"

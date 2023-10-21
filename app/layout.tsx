@@ -9,7 +9,7 @@ import i18n from './locales/i18n';
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head'
-import { Poppins } from '@next/font/google';
+import { Poppins } from "next/font/google";
 
 const Navbar = dynamic(() => import('./components/landing-page/Navbar') as Promise<any>, {
   ssr: false,

@@ -5,12 +5,12 @@ interface DarkModeState {
 }
 
 interface DarkModeActions {
-  setDarkMode: () => void;
+  setDarkMode: (isDarkMode: boolean) => void;
 }
 
 const useDarModeStore = create<DarkModeState & DarkModeActions>((set) => ({
   isDarkMode: false,
-  setDarkMode: () => set((state) => ({isDarkMode: !state.isDarkMode}))
+  setDarkMode: (isDarkMode: boolean) => set((state) => ({isDarkMode: isDarkMode}))
 }));
 
 export default useDarModeStore;
