@@ -1,0 +1,152 @@
+<svg
+    width="1080"
+    height="1081"
+    viewBox="0 0 1080 1081"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <g clip-path="url(#clip0_13_504)">
+        <rect
+            width="1080"
+            height="1080"
+            transform="translate(0 0.5)"
+            fill="white"
+        />
+        <g filter="url(#filter0_f_13_504)">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1418.29 756.7C1393.31 809.379 1336.83 837.02 1294.03 876.584C1255.83 911.892 1226.39 958.406 1178.41 978.443C1130.74 998.353 1077.14 983.554 1025.74 988.625C967.181 994.402 907.44 1032.41 852.812 1010.56C798.803 988.968 774.439 926.323 744.747 876.272C717.093 829.656 694.596 780.624 684.77 727.302C675.012 674.351 670.611 618.809 687.905 567.809C704.832 517.894 745.115 481.02 781.282 442.697C816.048 405.858 851.2 369.145 896.585 346.692C942.792 323.831 994.208 318.867 1045.3 312.08C1103.22 304.384 1168.35 273.479 1218.2 303.964C1268.97 335.013 1256.16 417.001 1293.15 463.65C1331.47 511.992 1411.33 521.372 1435.56 578.124C1459.34 633.799 1444.24 701.98 1418.29 756.7Z"
+                fill="url(#paint0_linear_13_504)"
+            >
+                <animate
+                    attributeName="fill"
+                    values="#FF613F;#EB00FF"
+                    dur="3s"
+                    repeatCount="indefinite"
+                />
+            </path>
+        </g>
+        <g filter="url(#filter1_f_13_504)">
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M1.68506 -127.418C52.2861 -118.149 88.436 -77.8842 131.759 -51.3041C170.422 -27.5836 216.735 -13.3747 244.496 21.5541C272.082 56.2616 271.279 103.125 286.993 144.006C304.893 190.576 350.63 231.31 344.028 280.504C337.502 329.14 289.292 362.246 253.037 397.042C219.271 429.451 182.296 458.16 138.846 477.434C95.6989 496.573 49.1492 511.888 1.68506 508.538C-44.7693 505.259 -85.2339 480.166 -126.027 458.738C-165.241 438.139 -204.432 417.2 -233.686 384.9C-263.471 352.014 -279.096 311.1 -296.209 270.838C-315.611 225.188 -356.466 178.555 -341.414 131.438C-326.082 83.4482 -253.096 76.5995 -221.365 36.5694C-188.483 -4.91364 -198.127 -72.0633 -154.932 -103.821C-112.555 -134.976 -50.8777 -137.047 1.68506 -127.418Z"
+                fill="url(#paint1_linear_13_504)"
+            >
+                <animate
+                    attributeName="fill"
+                    values="#3FE8FF;#52FF00"
+                    dur="3s"
+                    repeatCount="indefinite"
+                />
+            </path>
+        </g>
+        <g filter="url(#filter2_b_13_504)">
+            <rect
+                width="1080"
+                height="1080"
+                transform="translate(0 0.5)"
+                fill="white"
+                fill-opacity="0.7"
+            />
+        </g>
+    </g>
+    <defs>
+        <filter
+            id="filter0_f_13_504"
+            x="376.188"
+            y="-9.21497"
+            width="1371.26"
+            height="1326.49"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+        >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+            />
+            <feGaussianBlur
+                stdDeviation="150"
+                result="effect1_foregroundBlur_13_504"
+            />
+        </filter>
+        <filter
+            id="filter1_f_13_504"
+            x="-644.675"
+            y="-432.503"
+            width="1289.35"
+            height="1241.5"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+        >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+            />
+            <feGaussianBlur
+                stdDeviation="150"
+                result="effect1_foregroundBlur_13_504"
+            />
+        </filter>
+        <filter
+            id="filter2_b_13_504"
+            x="-80"
+            y="-79.5"
+            width="1240"
+            height="1240"
+            filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB"
+        >
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feGaussianBlur in="BackgroundImageFix" stdDeviation="40" />
+            <feComposite
+                in2="SourceAlpha"
+                operator="in"
+                result="effect1_backgroundBlur_13_504"
+            />
+            <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_backgroundBlur_13_504"
+                result="shape"
+            />
+        </filter>
+        <linearGradient
+            id="paint0_linear_13_504"
+            x1="1424.61"
+            y1="756.365"
+            x2="687.852"
+            y2="565.826"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop stop-color="#FF613F" />
+            <stop offset="1" stop-color="#EB00FF" />
+        </linearGradient>
+        <linearGradient
+            id="paint1_linear_13_504"
+            x1="0"
+            y1="-132.503"
+            x2="0"
+            y2="509"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop stop-color="#3FE8FF" />
+            <stop offset="1" stop-color="#52FF00" />
+        </linearGradient>
+        <clipPath id="clip0_13_504">
+            <rect
+                width="1080"
+                height="1080"
+                fill="white"
+                transform="translate(0 0.5)"
+            />
+        </clipPath>
+    </defs>
+</svg>

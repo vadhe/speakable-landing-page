@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head'
 import { Poppins } from "next/font/google";
+import { cn } from './utils/cn';
 
 const Navbar = dynamic(() => import('./components/landing-page/Navbar') as Promise<any>, {
   ssr: false,
@@ -27,7 +28,7 @@ export default function RootLayout({
 }) {
   const { isDarkMode } = useDarModeStore();
   return (
-    <html lang="en" className={isDarkMode ? 'dark' : ''}>
+    <html lang="en" className={cn('scroll-smooth', isDarkMode ? 'dark' : '' )}>
       <body className={`${poppins.variable} font-poppins bg-base-100 dark:bg-gray-900 text-gray-900 dark:text-white`}>
         <I18nextProvider i18n={i18n}>
           <Navbar />
