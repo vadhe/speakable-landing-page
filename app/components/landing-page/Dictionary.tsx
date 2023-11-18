@@ -1,7 +1,9 @@
 'use client';
 
+import useDarModeStore from 'app/store/useDarkModeStore';
 import useWordStore from 'app/store/useWordStore';
 import supabase from 'app/supabase/supabase';
+import { cn } from 'app/utils/cn';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -11,6 +13,7 @@ export const Dictionary = () => {
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [isNull, setIsNull] = useState(false);
+  const {isDarkMode} = useDarModeStore();
   const getWord = async (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     search: string
@@ -30,7 +33,7 @@ export const Dictionary = () => {
   };
 
   return (
-    <div className="hero min-h-screen">
+    <div className={cn("hero min-h-screen",  isDarkMode ? '': "bg-[url('/images/bg.svg')]")}>
       <div className="hero-content text-center">
         <div className="h-96 md:w-160 ">
           <form action="" className="w-full md:flex justify-between">
@@ -82,11 +85,9 @@ export const Dictionary = () => {
               ) : (
                 ''
               )}
-              <h1 className="text-4xl font-bold my-8">{t('welcome')}</h1>
+              <h1 className="text-4xl font-bold my-8">{t('header.title')}</h1>
               <div className="w-full  h-40">
-                the vibrant community Discord where you can immerse yourself in
-                English learning and connect with fellow language enthusiasts
-                from all around the globe!
+              {t('header.description')}
               </div>
             </div>
           )}

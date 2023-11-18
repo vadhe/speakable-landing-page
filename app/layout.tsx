@@ -3,37 +3,48 @@
 import { I18nextProvider } from 'react-i18next';
 import Footer from './components/landing-page/Footer';
 // import { Navbar } from './components/landing-page/Navbar';
-import './global.css';
+import './globals.css';
 import useDarModeStore from './store/useDarkModeStore';
 import i18n from './locales/i18n';
 import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import Head from 'next/head'
-import { Poppins } from "next/font/google";
+import Head from 'next/head';
+import { Poppins } from 'next/font/google';
 import { cn } from './utils/cn';
+import { ThemeProvider } from './components/theme/theme-provider';
 
-const Navbar = dynamic(() => import('./components/landing-page/Navbar') as Promise<any>, {
-  ssr: false,
-}) 
+const Navbar = dynamic(
+  () => import('./components/landing-page/Navbar') as Promise<any>,
+  {
+    ssr: false,
+  }
+);
 
 const poppins = Poppins({
-  subsets: ['latin'] ,
+  subsets: ['latin'],
   weight: ['400', '600'],
-  variable: '--font-poppins'
-})
+  variable: '--font-poppins',
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { isDarkMode } = useDarModeStore();
   return (
-    <html lang="en" className={cn('scroll-smooth', isDarkMode ? 'dark' : '' )}>
-      <body className={`${poppins.variable} font-poppins bg-base-100 dark:bg-gray-900 text-gray-900 dark:text-white`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${poppins.variable} font-poppins bg-base-100 px-8`}
+      >
         <I18nextProvider i18n={i18n}>
-          <Navbar />
-          {children}
-          <Footer />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            {children}
+          </ThemeProvider>
         </I18nextProvider>
       </body>
     </html>

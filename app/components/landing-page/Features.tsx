@@ -3,7 +3,7 @@ import Card from './Card';
 import TitleSection from './TitleSection';
 const LISTCARDS = [
   {
-    title: 'App Development',
+    title: 'Basic Class',
     description:
       'We provide the best UI/UX Design by following the latest trends of the market',
     img: 'https://landing.zytheme.com/ladidapp/assets/images/icons/icon-code.svg',
