@@ -1,6 +1,5 @@
 'use client';
 
-
 import { renderComponentBasedOnCondition } from 'app/lib/render-component';
 import useDarModeStore from 'app/store/useDarkModeStore';
 import useStore from 'app/store/useDarkModeStore';
@@ -9,6 +8,8 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Separator } from "@/components/ui/separator"
+
 const Links = [
   {
     name: 'Home',
@@ -77,6 +78,7 @@ export const Navbar = () => {
             </li>
           );
         })}
+        <Separator orientation='vertical' />
         {renderComponentBasedOnCondition(
           theme === 'light',
           <MoonStar onClick={() => setTheme('dark')} />,

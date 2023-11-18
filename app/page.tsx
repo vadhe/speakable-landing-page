@@ -4,6 +4,7 @@ import { Dictionary } from './components/landing-page/Dictionary';
 import Features from './components/landing-page/Features';
 import Head from 'next/head';
 import { Metadata } from 'next';
+import { Header } from './components/landing-page/Header';
 
 export const metadata: Metadata = {
   title: 'SpeakAble Youth',
@@ -34,11 +35,12 @@ export default async function Index() {
    * Note: The corresponding styles are in the ./index.css file.
    */
   return (
-    <div>
+    <>
+    <Header/>
       {/* <Dictionary /> */}
       {/* <Features /> */}
       {/* <About /> */}
       {/* <Blog /> */}
-    </div>
+    </>
   );
 }
