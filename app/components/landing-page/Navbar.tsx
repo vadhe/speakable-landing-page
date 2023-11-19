@@ -48,7 +48,7 @@ export const Navbar = () => {
     }
   };
   return (
-    <nav className=" w-full flex justify-between pt-8">
+    <nav className=" w-full flex justify-between p-8">
       <div>
         <svg
           viewBox="0 0 248 31"

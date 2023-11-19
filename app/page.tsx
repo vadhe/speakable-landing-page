@@ -38,7 +38,7 @@ export default async function Index() {
     <>
     <Header/>
       {/* <Dictionary /> */}
-      {/* <Features /> */}
+      <Features />
       {/* <About /> */}
       {/* <Blog /> */}
     </>

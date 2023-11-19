@@ -10,7 +10,6 @@ import { useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { Poppins } from 'next/font/google';
-import { cn } from './utils/cn';
 import { ThemeProvider } from './components/theme/theme-provider';
 
 const Navbar = dynamic(
@@ -31,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className='scroll-smooth'>
       <body
-        className={`${poppins.variable} font-poppins bg-base-100 px-8`}
+        className={`${poppins.variable} font-poppins bg-base-100`}
       >
         <I18nextProvider i18n={i18n}>
           <ThemeProvider
@@ -44,6 +43,7 @@ export default function RootLayout({
           >
             <Navbar />
             {children}
+            {/* <Footer/> */}
           </ThemeProvider>
         </I18nextProvider>
       </body>
