@@ -1,8 +1,6 @@
 import About from './components/landing-page/About';
 import { Blog } from './components/landing-page/Blog';
-import { Dictionary } from './components/landing-page/Dictionary';
 import Features from './components/landing-page/Features';
-import Head from 'next/head';
 import { Metadata } from 'next';
 import { Header } from './components/landing-page/Header';
 
@@ -37,10 +35,9 @@ export default async function Index() {
   return (
     <>
     <Header/>
-      {/* <Dictionary /> */}
       <Features />
-      {/* <About /> */}
-      {/* <Blog /> */}
+      <About />
+      <Blog />
     </>
   );
 }

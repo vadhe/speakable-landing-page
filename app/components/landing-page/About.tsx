@@ -1,29 +1,23 @@
 import React from 'react';
-import TitleSection from './TitleSection';
-
+import { BackgroundBlur } from './BackgroundBlur';
+import Image from 'next/image';
+import AboutUs from "../../../public/images/about-us.jpeg"
 export const About = () => {
   return (
-    <div id="about" className="lg:h-screen py-6 px-6 lg:flex items-center gap-12 bg-sky-100 bg-opacity-20 border border-sky-500 dark:border-sky-800">
-      <img
-        src="https://landing.zytheme.com/ladidapp/assets/images/cover/about.png"
-        alt="cover"
-        width={800}
-        height={800}
-      />
-      <div className="">
-        <TitleSection
-          title="About Us"
-          subTitle="Best Financing App In The World"
-        />
-        <p className="lg:w-10/12">
-          Best financing app ever in the world. Easy to use and very user
-          friendly for mobile banking. You can control your card easily and send
-          money some one just one click.
-        </p>
-        <div className="w-full flex justify-center md:block">
-          <button className="btn btn-outline border border-sky-500 hover:bg-transparent hover:border-sky-500 hover:text-black dark:border-sky-800 mt-6 mx-auto dark:text-white">
-            Join Our Community
-          </button>
+    <div>
+      <div className="bg-[url('/images/parallax-2.jpeg')] filter  min-h-screen bg-center bg-fixed bg-cover bg-no-repeat"></div>
+      <div className=" text-center relative dark:bg-gray-900 pt-6 min-h-screen">
+        <BackgroundBlur />
+        <h2 className="font-semibold text-4xl">ABOUT US</h2>
+        <Image src={AboutUs} alt='' width={500} height={500} className='mx-auto my-6'/>
+        <div className="w-1/2 mx-auto">
+          <p className=''>
+            Speakable Youth is a safe place for speaking English with no judging
+            English and increasing your skill in speaking English with Speakable
+            Youth. We offer a variety of resources and activities to help you
+            improve your English skills, including: Daily words, idioms of the
+            week, movie nights, game nights, English classes, etc.
+          </p>
         </div>
       </div>
     </div>
