@@ -83,7 +83,7 @@ export const Features = () => {
                   x: 0,
                   transition: { duration: index === 0 ? 1.5 : index === 1 ? 2: index === 2 ? 2 : 2.5, ease: 'easeOut' },
                 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
               >
                 <Card
                   key={`${list.title}-${index}`}

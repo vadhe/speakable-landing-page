@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import { BackgroundBlur } from './BackgroundBlur';
 import Image from 'next/image';
-import AboutUs from "../../../public/images/about-us.png"
+import AboutUs from '../../../public/images/about-us.png';
+import { motion } from 'framer-motion';
+import { AnimateLogo } from './AnimateLogo';
 export const About = () => {
   return (
     <div>
@@ -9,9 +13,11 @@ export const About = () => {
       <div className=" text-center relative dark:bg-gray-900 pt-6 min-h-screen">
         <BackgroundBlur />
         <h2 className="font-semibold text-4xl">ABOUT US</h2>
-        <Image src={AboutUs} alt='' width={500} height={500} className='mx-auto my-6'/>
+        <div className='flex justify-center my-4 mx-auto'>
+        <AnimateLogo />
+        </div>
         <div className="w-1/2 mx-auto">
-          <p className=''>
+          <p>
             Speakable Youth is a safe place for speaking English with no judging
             English and increasing your skill in speaking English with Speakable
             Youth. We offer a variety of resources and activities to help you
