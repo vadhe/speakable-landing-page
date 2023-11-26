@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Card from './Card';
 import BasicClass from '../../../public/images/basic-class.png';
@@ -7,6 +8,7 @@ import ReadingClass from '../../../public/images/reading-class.png';
 import EnglishCompetition from '../../../public/images/english-competition.png';
 import GameNight from '../../../public/images/game-night.png';
 import { BackgroundBlur } from './BackgroundBlur';
+import { motion } from 'framer-motion';
 const LISTCARDS = [
   {
     title: 'Basic Class',
@@ -59,18 +61,64 @@ export const Features = () => {
         id="features"
       >
         <BackgroundBlur />
-        <h2 className="font-semibold text-4xl my-12 mb-24">OUR BEST PROGRAM</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:place-items-center gap-24 md:gap-x-10 md:gap-y-44 mt-16">
-          {LISTCARDS.map((list, index) => {
+        <motion.h2
+          initial={{ opacity: 0, x: '-70vw' }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: 'easeOut' },
+          }}
+          viewport={{ once: true }}
+          className="font-semibold text-4xl my-12 mb-24"
+        >
+          OUR BEST PROGRAM
+        </motion.h2>
+        <div className="grid relative grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:place-items-center gap-24 md:gap-x-10 md:gap-y-44 mt-16">
+          {LISTCARDS.slice(0,4).map((list, index) => {
             return (
-              <Card
-                key={`${list.title}-${index}`}
-                bg={list.bg}
-                description={list.description}
-                img={list.img}
-                title={list.title}
-                index={index}
-              />
+              <motion.div
+                initial={{ opacity: 0, x: `${index === 0 ? -20 : index === 1 ? -40: index === 2 ? -70 : -80}vw` }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: index === 0 ? 1.5 : index === 1 ? 2: index === 2 ? 2 : 2.5, ease: 'easeOut' },
+                }}
+                viewport={{ once: false }}
+              >
+                <Card
+                  key={`${list.title}-${index}`}
+                  bg={list.bg}
+                  description={list.description}
+                  img={list.img}
+                  title={list.title}
+                  index={index}
+                />
+              </motion.div>
+            );
+          })}
+        </div>
+        <div className="grid relative grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:place-items-center gap-24 md:gap-x-10 md:gap-y-44 mt-16">
+          {LISTCARDS.slice(4,7).map((list, index) => {
+            return (
+              <motion.div
+                initial={{ opacity: 0, x: `${index === 0 ? 70 : index === 1 ? -70: index === 2 ? -70 : -80}vw` }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 3.5, ease: 'easeOut' },
+                }}
+                viewport={{ once: true }}
+                className={`col-start-${index+2} col-end-${index+3}`}
+              >
+                <Card
+                  key={`${list.title}-${index}`}
+                  bg={list.bg}
+                  description={list.description}
+                  img={list.img}
+                  title={list.title}
+                  index={index}
+                />
+              </motion.div>
             );
           })}
         </div>

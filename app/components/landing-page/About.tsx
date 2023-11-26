@@ -1,7 +1,7 @@
 import React from 'react';
 import { BackgroundBlur } from './BackgroundBlur';
 import Image from 'next/image';
-import AboutUs from "../../../public/images/about-us.jpeg"
+import AboutUs from "../../../public/images/about-us.png"
 export const About = () => {
   return (
     <div>
