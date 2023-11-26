@@ -34,9 +34,9 @@ export const Dictionary = () => {
   };
 
   return (
-    <div className='relative z-50 flex gap-5 w-full'>
+    <div className='relative z-50 flex flex-col  lg:flex-row gap-5 w-full p-4 lg:p-0'>
       <Input placeholder="Search any Idiom" />
-      <Button type="submit">Search</Button>
+      <Button className='mx-auto' type="submit">Search</Button>
     </div>
   );
 };

@@ -54,8 +54,7 @@ const LISTCARDS = [
 ];
 export const Features = () => {
   return (
-    <div>
-      <div className="bg-[url('/images/parallax-1.webp')] filter  min-h-screen bg-center bg-fixed bg-cover bg-no-repeat"></div>
+    <div className='border-t-4 border-t-red-600'>
       <div
         className="px-6 pb-12 text-center relative dark:bg-gray-900 pt-6"
         id="features"
@@ -69,7 +68,7 @@ export const Features = () => {
             transition: { duration: 1, ease: 'easeOut' },
           }}
           viewport={{ once: true }}
-          className="font-semibold text-4xl my-12 mb-24"
+          className="font-semibold text-lg lg:text-4xl my-12 mb-24"
         >
           OUR BEST PROGRAM
         </motion.h2>
@@ -97,11 +96,11 @@ export const Features = () => {
             );
           })}
         </div>
-        <div className="grid relative grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:place-items-center gap-24 md:gap-x-10 md:gap-y-44 mt-16">
+        <div className="lg:grid flex flex-col relative grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:place-items-center gap-24 md:gap-x-10 md:gap-y-44 mt-16">
           {LISTCARDS.slice(4,7).map((list, index) => {
             return (
               <motion.div
-                initial={{ opacity: 0, x: `${index === 0 ? 70 : index === 1 ? -70: index === 2 ? -70 : -80}vw` }}
+                initial={{ opacity: 0, x: `${index === 0 ? -40 :  40}vw` }}
                 whileInView={{
                   opacity: 1,
                   x: 0,

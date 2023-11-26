@@ -37,7 +37,7 @@ export default async function Index() {
     <Header/>
       <Features />
       <About />
-      <Blog />
+      {/* <Blog /> */}
     </>
   );
 }
