@@ -81,6 +81,4 @@ export const AnimateLogo = () => {
     </InView>
   );
 };
-function setState(arg0: boolean): [any, any] {
-  throw new Error('Function not implemented.');
-}
+export default AnimateLogo

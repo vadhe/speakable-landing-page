@@ -5,8 +5,9 @@ import { Metadata } from 'next';
 import { Header } from './components/landing-page/Header';
 import dynamic from 'next/dynamic'
  
-const About = dynamic(() => import('./components/landing-page/About'), {
-  loading: () => <p>Loading...</p>,
+const About = dynamic(() => import('./components/landing-page/About')as Promise<any>,
+{
+  ssr: false,
 })
  
 
