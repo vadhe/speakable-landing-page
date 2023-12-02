@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import useDarModeStore from 'app/store/useDarkModeStore';
 import useWordStore from 'app/store/useWordStore';
 import supabase from 'app/supabase/supabase';
 import React, { useState } from 'react';
@@ -14,7 +13,6 @@ export const Dictionary = () => {
   const { t, i18n } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [isNull, setIsNull] = useState(false);
-  const { isDarkMode } = useDarModeStore();
   const getWord = async (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     search: string

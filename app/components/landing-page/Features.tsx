@@ -76,6 +76,7 @@ export const Features = () => {
           {LISTCARDS.slice(0,4).map((list, index) => {
             return (
               <motion.div
+              key={`${list.title}-${index}`}
                 initial={{ opacity: 0, x: `${index === 0 ? -20 : index === 1 ? -40: index === 2 ? -70 : -80}vw` }}
                 whileInView={{
                   opacity: 1,
@@ -85,7 +86,7 @@ export const Features = () => {
                 viewport={{ once: true }}
               >
                 <Card
-                  key={`${list.title}-${index}`}
+                
                   bg={list.bg}
                   description={list.description}
                   img={list.img}
@@ -100,6 +101,7 @@ export const Features = () => {
           {LISTCARDS.slice(4,7).map((list, index) => {
             return (
               <motion.div
+              key={`${list.title}-${index}`}
                 initial={{ opacity: 0, x: `${index === 0 ? -40 :  40}vw` }}
                 whileInView={{
                   opacity: 1,
@@ -110,7 +112,7 @@ export const Features = () => {
                 className={`col-start-${index+2} col-end-${index+3}`}
               >
                 <Card
-                  key={`${list.title}-${index}`}
+                 
                   bg={list.bg}
                   description={list.description}
                   img={list.img}

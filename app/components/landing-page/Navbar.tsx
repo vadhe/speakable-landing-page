@@ -1,22 +1,14 @@
 'use client';
 
 import { renderComponentBasedOnCondition } from 'app/lib/render-component';
-import useDarModeStore from 'app/store/useDarkModeStore';
-import useStore from 'app/store/useDarkModeStore';
-import { Languages, Moon, MoonStar, Sun, SunMoon } from 'lucide-react';
+import { ArrowUpCircle, Home, ListChecks, ListOrdered, MoonStar, Newspaper, Sun, Users } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
-import React, { ReactNode, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useEffect, useState } from 'react';
 import { Separator } from '@/components/ui/separator';
-import Logo from '../../../public/images/logo.svg';
-import {
-  useAnimationControls,
-  motion,
-  useScroll,
-  useMotionValueEvent,
-} from 'framer-motion';
-import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { BackgroundBlur } from './BackgroundBlur';
+import Link from 'next/link';
 
 const Links = [
   {
@@ -28,20 +20,37 @@ const Links = [
     link: 'features',
   },
   {
-    name: 'Events And Competitions',
-    link: 'events',
-  },
-  {
     name: 'About',
     link: 'about',
   },
   {
-    name: 'Recruitment Staff',
-    link: 'recruitment',
+    name: 'Articles',
+    link: 'articles',
+  },
+];
+const LinksMobile = [
+  {
+    name: 'Home',
+    link: 'home',
+    icon: <Home className='w-6 h-6'/>
+  },
+  {
+    name: 'Features',
+    link: 'features',
+    icon: <ListOrdered  className='w-6 h-6' />
+  },
+  {
+    name: 'About',
+    link: 'about',
+    icon: <Users  className='w-6 h-6'/>
+  },
+  {
+    name: 'Articles',
+    link: 'articles',
+    icon: <Newspaper  className='w-6 h-6' />
   },
 ];
 export const Navbar = () => {
-  const { i18n } = useTranslation();
   const [scrollY, setScrollY] = useState(window.scrollY);
   const { setTheme, theme } = useTheme();
 
@@ -50,13 +59,9 @@ export const Navbar = () => {
       setScrollY(window.scrollY);
     });
   }, [scrollY]);
-  const navbarTransition = (scrollY: number) => {
-    if (scrollY >= 75) {
-      return 'bg-neutral  text-white  ransform -translate-y-full translate-y-0';
-    }
-  };
+
   return (
-    <nav className=" w-full flex items-center justify-between p-4 lg:p-8 sticky lg:relative top-0 z-[100] bg-white lg:bg-transparent lg:dark:bg-transparent">
+    <nav className=" w-full flex items-center justify-between p-4 lg:p-8 sticky lg:relative top-0 z-[100] bg-white dark:bg-black lg:bg-transparent lg:dark:bg-transparent">
       <svg
         width="150"
         height="20"
@@ -85,9 +90,9 @@ export const Navbar = () => {
         {Links.map((link) => {
           return (
             <li key={link.name} className="hidden lg:block">
-              <a href={`#${link.link}`} className="dark:hover:text-gray-400 ">
-                {link.name}
-              </a>
+              <Link href={`#${link.link}`} className="dark:hover:text-gray-400 ">
+              {link.name}
+              </Link>
             </li>
           );
         })}
@@ -108,6 +113,29 @@ export const Navbar = () => {
           </motion.div>
         )}
       </ul>
+      <ArrowUpCircle
+        onClick={() => {
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        }}
+        className={cn(
+          'fixed top-[47rem] w-8 h-8 hidden stroke-sky-400 z-50 right-6 animate-bounce cursor-pointer',
+          scrollY >= 902 ? 'md:block' : 'hidden'
+        )}
+      />
+      <div className="h-16  fixed bottom-0 md:hidden left-0 right-0">
+      <div className=" filter blur-sm  bg-white dark:bg-black absolute bottom-0 left-0 top-0 right-0"></div>
+        <ul className='flex justify-around relative items-center'>
+          {LinksMobile.map((link) => {
+            return (
+              <li key={link.name} className='w-12 h-12  flex items-center justify-center self-center'>
+                <Link href={`#${link.link}`} className="dark:hover:text-gray-400 ">
+                {link.icon}
+              </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 };

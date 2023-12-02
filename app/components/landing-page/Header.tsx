@@ -42,7 +42,7 @@ export const Header = () => {
   }, [controlsDictionary]);
 
   return (
-    <div className="h-screen w-full relative">
+    <div className="h-screen w-full relative" id="home">
       <div className="absolute  rounded-sm top-0 bottom-0 right-0 left-0  filter blur-xl"></div>
       <div className="absolute  animate-blob h-[45rem] w-[45rem] hidden lg:block top-0 mix-blend-multiply filter blur-xl left-0 bottom-0 rounded-full dark:bg-green-500 bg-green-200 opacity-20"></div>
       <div className="absolute animation-delay-2000 animate-blob h-[45rem] w-[45rem] hidden lg:block top-0 mix-blend-multiply filter blur-xl right-0 -bottom-8 rounded-full dark:bg-pink-500 bg-pink-200 opacity-20"></div>

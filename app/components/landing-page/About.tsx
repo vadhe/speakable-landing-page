@@ -39,7 +39,7 @@ export const About = () => {
   };
 
   return (
-    <div>
+    <div id="about">
       <div className=" text-center relative dark:bg-gray-900 pt-6 min-h-screen border-t-4 border-t-red-600">
         <BackgroundBlur />
         <motion.h2
