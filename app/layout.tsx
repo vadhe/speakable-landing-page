@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
-      <body className={`${poppins.variable} font-poppins bg-base-100`}>
+      <body className={`${poppins.variable} font-poppins bg-base-100 overflow-x-hidden`}>
         <I18nextProvider i18n={i18n}>
           <ThemeProvider
             attribute="class"
