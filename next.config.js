@@ -12,6 +12,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    domains: ['www.datocms-assets.com'],
+  },
 };
 
 const plugins = [

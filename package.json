@@ -28,7 +28,11 @@
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "tslib": "^2.3.0",
-    "zustand": "^4.4.1"
+    "zustand": "^4.4.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^4.0.0",
+    "sharp": "^0.33.0"
   },
   "devDependencies": {
     "@nx/eslint-plugin": "16.7.4",
